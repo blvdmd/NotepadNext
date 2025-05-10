@@ -32,8 +32,8 @@ jobs:
         with:
           version: ${{ matrix.qt_version }}
           modules: 'qt5compat'
-          cache: true
-          arch: 'linux_gcc_arm64'
+          cache: false
+          arch: 'linux_arm64'
 
       - name: Get number of CPU cores
         if: runner.os != 'Windows'
