@@ -68,11 +68,11 @@ linux {
     appimage.commands = \
         make install INSTALL_ROOT=AppDir && \
         cd NotepadNext && \
-        wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage" && \
-        wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-x86_64.AppImage" && \
+        wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-aarch64.AppImage" && \
+        wget --no-verbose "https://github.com/linuxdeploy/linuxdeploy-plugin-qt/releases/download/continuous/linuxdeploy-plugin-qt-aarch64.AppImage" && \
         chmod +x linuxdeploy*.AppImage && \
-        export OUTPUT=NotepadNext-v$${APP_VERSION}-x86_64.AppImage && \
-        ./linuxdeploy-x86_64.AppImage --appdir AppDir --plugin qt --output appimage
+        export OUTPUT=NotepadNext-v$${APP_VERSION}-arm64.AppImage && \
+        ./linuxdeploy-aarch64.AppImage --appdir AppDir --plugin qt --output appimage
 
     QMAKE_EXTRA_TARGETS += appimage
 }
