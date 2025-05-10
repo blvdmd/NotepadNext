@@ -9,7 +9,7 @@ on:
   pull_request:
 
 env:
-  QT_RELEASE_VER: 6.5
+  QT_RELEASE_VER: 6.7
 
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-22.04-arm, windows-latest, macos-latest]
-        qt_version: ["6.5"]
+        qt_version: ["6.7"]
 
     runs-on: ${{ matrix.os }}
 
